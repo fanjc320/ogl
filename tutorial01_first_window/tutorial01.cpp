@@ -30,7 +30,8 @@ int main( void )
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 	// Open a window and create its OpenGL context
-	window = glfwCreateWindow( 1024, 768, "Tutorial 01", NULL, NULL);
+	//window = glfwCreateWindow( 1024, 768, "Tutorial 01", NULL, NULL);
+	window = glfwCreateWindow( 100, 768, "Tutorial 01", NULL, NULL);
 	if( window == NULL ){
 		fprintf( stderr, "Failed to open GLFW window. If you have an Intel GPU, they are not 3.3 compatible. Try the 2.1 version of the tutorials.\n" );
 		getchar();
@@ -73,4 +74,19 @@ int main( void )
 
 	return 0;
 }
+
+
+//glew（The OpenGL Extension Wrangler Library）是对底层OpenGL接口的封装，可以让你的代码跨平台。glad与glew作用相同，可以看作它的升级版。
+//Freeglut（OpenGL Utility Toolkit）主要用于创建OpenGL上下文、接收一些鼠标键盘事件等等。
+//glfw（Graphics Library Framework）是Freeglut升级版，作用基本一样。
+//通常来说glad和glfw配合使用，比如我上面发的那个网站就是。
+//glew和Freeglut配合使用，比如OpenGL红宝书上面的例子。
+// 
+// >>glad<<->(glew)
+// >>glfw<<->(glut)
+//
+//作者：醉里挑灯看剑
+//链接：https ://www.zhihu.com/question/264132001/answer/729626917
+//来源：知乎
+//著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
